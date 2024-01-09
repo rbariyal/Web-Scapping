@@ -61,7 +61,7 @@ const data={
 image:imageUrls[0],
 title,
 currentPrice:Number(currentPrice) || Number(originalPrice),
-originalPricePrice:Number(originalPrice) || Number(currentPrice) ,
+originalPrice:Number(originalPrice) || Number(currentPrice) ,
 priceHistory:[],
 discountRate:Number(discountRate),
 category:'category',
