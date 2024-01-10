@@ -3,7 +3,7 @@ import { connectToDB } from "@/lib/mongoose"
 import { scrapeAmazonProduct } from "@/lib/scrapper";
 import { getAveragePrice, getEmailNotifType, getHighestPrice, getLowestPrice } from "@/lib/utils";
 
-export const maxDuration=300;
+export const maxDuration=3000;
 export const dynamic='force-dynamic'
 export const revalidate=0;
 export async function GET()
