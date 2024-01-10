@@ -27,7 +27,7 @@ const existingProduct=await Product.find({url:scrapedProduct.url})
 
 
 
-if(existingProduct[0])
+if(existingProduct)
 {
     const updatedPriceHistory:any=[
         ...existingProduct[0].priceHistory,
