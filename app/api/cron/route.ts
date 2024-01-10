@@ -3,6 +3,9 @@ import { connectToDB } from "@/lib/mongoose"
 import { scrapeAmazonProduct } from "@/lib/scrapper";
 import { getAveragePrice, getEmailNotifType, getHighestPrice, getLowestPrice } from "@/lib/utils";
 
+export const maxDuration=300;
+export const dynamic='force-dynamic'
+
 export async function GET()
 {
     try {
@@ -31,7 +34,7 @@ const product={
 }
 
 
-const updatedProduct=await Product.findOneAndUpdate({url:scrapedProduct.url},
+const updatedProduct=await Product.findOneAndUpdate({url:product.url},
 product,
 )
 
