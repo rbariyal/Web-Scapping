@@ -23,14 +23,14 @@ try {
 
 let product=scrapedProduct;
 
-const existingProduct=await Product.find({url:scrapedProduct.url})
+const existingProduct=await Product.findOne({url:scrapedProduct.url})
 
 
 
 if(existingProduct)
 {
     const updatedPriceHistory:any=[
-        ...existingProduct[0].priceHistory,
+        ...existingProduct.priceHistory,
         {price:scrapedProduct.currentPrice}
     ]
 
